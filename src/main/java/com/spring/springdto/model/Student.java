@@ -1,11 +1,14 @@
 package com.spring.springdto.model;
-
 import jakarta.persistence.*;
-import org.hibernate.annotations.IdGeneratorType;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="students")
-
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,5 +17,7 @@ public class Student {
     @Column(name="student_name")
     private String studentName;
     @Column(name="student_age")
-    private String studentAge ;
+    private Integer studentAge ;
+
+
 }

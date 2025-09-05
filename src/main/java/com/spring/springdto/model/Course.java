@@ -1,9 +1,14 @@
 package com.spring.springdto.model;
 import jakarta.persistence.*;
-import java.math.BigDecimal;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="courses")
 
@@ -17,6 +22,6 @@ public class Course {
     @Column(name = "course_cost", precision = 10, scale = 2)
     private BigDecimal courseCost ;
     @Column(name="course_time")
-    private LocalDateTime courseTime ;
+    private Integer courseTime ;
 
 }
