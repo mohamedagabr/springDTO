@@ -1,5 +1,5 @@
 package com.spring.springdto.controller;
-import com.spring.springdto.model.Course;
+import com.spring.springdto.model.entity.Course;
 import com.spring.springdto.service.CourseService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

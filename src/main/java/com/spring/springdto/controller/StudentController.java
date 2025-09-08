@@ -1,6 +1,7 @@
 package com.spring.springdto.controller;
-import com.spring.springdto.model.Student;
+import com.spring.springdto.dto.StudentDto;
 import com.spring.springdto.service.StudentService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,13 @@ public class StudentController {
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
+
+//    @GetMapping
+//    public List<StudentDto> getAllStudents(){
+//        return studentService.getAllStudent();
+//    }
     @GetMapping
-    public List<Student> getAllStudents(){
-        return studentService.getAllStudent();
+    public ResponseEntity<List<StudentDto>> getStudents(){
+        return ResponseEntity.ok(studentService.getAllStudent());
     }
 }

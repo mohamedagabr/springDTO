@@ -1,10 +1,12 @@
-package com.spring.springdto.model;
+package com.spring.springdto.model.entity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -23,5 +25,9 @@ public class Course {
     private BigDecimal courseCost ;
     @Column(name="course_time")
     private Integer courseTime ;
+    @OneToMany(mappedBy = "course" , fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<StudentCourse> studentCourses = new HashSet<>() ;
 
-}
+
+ }

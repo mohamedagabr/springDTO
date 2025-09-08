@@ -1,7 +1,6 @@
 package com.spring.springdto.repository;
 
-import com.spring.springdto.model.Course;
-import com.spring.springdto.model.Student;
+import com.spring.springdto.model.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

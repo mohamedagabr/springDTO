@@ -1,6 +1,6 @@
 package com.spring.springdto.service;
 
-import com.spring.springdto.model.Course;
+import com.spring.springdto.model.entity.Course;
 import com.spring.springdto.repository.CourseRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,9 @@ public class CourseService {
     }
 
     public List<Course> getAllCourses(){
+        return courseRepository.findAll();
+    }
+    public List<Course> getAllCoursesR(){
         return courseRepository.findAll();
     }
 }
